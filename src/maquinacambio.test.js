@@ -9,4 +9,8 @@ describe("Maquina cambio", () => {
     const maquinaCambio = new MaquinaCambio();
     expect(maquinaCambio.calcularMonedas(19)).toEqual("5 5 5 2 2 ");
   });
+  it("deberia devolver cambio monedas enteras y centavos", () => {
+    const maquinaCambio = new MaquinaCambio();
+    expect(maquinaCambio.calcularMonedas(3.5)).toEqual("2 1 0.5 ");
+  });
 });

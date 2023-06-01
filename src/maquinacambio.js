@@ -10,7 +10,7 @@ class MaquinaCambio {
   }
 
  calcularMonedas(efectivo) {
-    let monedas = [5, 2, 1];
+    let monedas = [5, 2, 1, 0.5, 0.2];
     let cambio = "";
     let i = 0;
     while (efectivo > 0) {
