@@ -1,14 +1,14 @@
-import sumar from "./sumador";
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+import calcularCambio from "./maquinacambio";
+const montoInput = document.querySelector("#idmonto");
+const efectivoInput = document.querySelector("#idefectivo");
+const form = document.querySelector("#cambio-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const monto = Number.parseInt(montoInput.value);
+  const efectivo = Number.parseInt(efectivoInput.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + calcularCambio(monto, efectivo) + "</p>";
 });
