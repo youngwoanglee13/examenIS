@@ -1,7 +1,9 @@
 function calcularCambio(monto, efectivo) {
   if (isNaN(monto) || isNaN(efectivo)) {
-    console.log("calcularCambio2");
     return "Ingrese ambos datos";	
+  }
+  if (monto > efectivo) {
+    return "El monto es mayor al efectivo";
   }
   return efectivo-monto;
 }

@@ -11,5 +11,12 @@ describe("Maquina cambio", () => {
     cy.get("#cambiobotton").click();
     cy.get("#resultado-div").should("contain", "Ingrese ambos datos");
   });
+  it("Si monto es mayor a efectivo muestra un mensaje", () => {
+    cy.visit("/");
+    cy.get("#idmonto").type(20);
+    cy.get("#idefectivo").type(10);
+    cy.get("#cambiobotton").click();
+    cy.get("#resultado-div").should("contain", "El monto es mayor al efectivo");
+  });
   
 });
