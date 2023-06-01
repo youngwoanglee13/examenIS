@@ -10,9 +10,19 @@ class MaquinaCambio {
   }
 
  calcularMonedas(efectivo) {
- 
-  return efectivo;
-}
+    let monedas = [5, 2, 1];
+    let cambio = "";
+    let i = 0;
+    while (efectivo > 0) {
+      if (efectivo >= monedas[i]) {
+        cambio+= monedas[i] + " ";
+        efectivo -= monedas[i];
+      } else {
+        i++;
+      }
+    }
+    return cambio;
+  }
 }
 export default MaquinaCambio;
 
