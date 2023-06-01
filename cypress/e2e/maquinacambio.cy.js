@@ -6,4 +6,10 @@ describe("Maquina cambio", () => {
     cy.get("#cambiobotton").click();
     cy.get("#resultado-div").should("contain", "5");
   });
+  it("Si los campos estan vacios se devuelve un mensaje de introducir campos", () => {
+    cy.visit("/");
+    cy.get("#cambiobotton").click();
+    cy.get("#resultado-div").should("contain", "Ingrese ambos datos");
+  });
+  
 });
