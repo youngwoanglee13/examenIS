@@ -7,6 +7,7 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  
   const monto = Number.parseInt(montoInput.value);
   const efectivo = Number.parseInt(efectivoInput.value);
 
